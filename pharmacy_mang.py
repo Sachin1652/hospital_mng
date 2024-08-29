@@ -20,12 +20,16 @@ class windows1:
         self.frame.pack()
 
 
+        self.Username = StringVar()
+        self.password = StringVar()
+
+
 
         self.LabelTitle = Label(self.frame,text = "      Pharmacy Management System     ",font = ("arail",40,"bold"),bd = 10,relief = "sunken")
         self.LabelTitle.grid(row = 0 , column=0,columnspan=2,pady=20)
 
         self.Loginframe1 = Frame(self.frame, width=1000, height=300, bd=10, relief="groove")
-        self.Loginframe1.grid(row=0, column=0)
+        self.Loginframe1.grid(row=1, column=0)
 
         self.Loginframe2 = Frame(self.frame, width=1000, height=100, bd=10, relief="groove")
         self.Loginframe2.grid(row=2, column=0, pady=15)
@@ -45,7 +49,23 @@ class windows1:
         self.button_med_stock = Button(self.Loginframe3,text="Patient Registration Window",font=("arial",15,"bold"),command=self.Medicine_Stock)
         self.button_med_stock.grid(row = 1,column = 1, padx = 10, pady = 10)
 
+
+        self.LabelUsername = Label(self.Loginframe1, text = "User Name",font=("arial", 20 , "bold"),bd=3)
+        self.LabelUsername.grid(row=0,column=0)
+
+        self.textUsername = Entry(self.Loginframe1,font=("arial",20,"bold"),bd=3,textvariable=self.Username)
+        self.textUsername.grid(row=0,column=1,padx=40,pady=15)
+
+        self.Labelpassword = Label(self.Loginframe1, text = "Password",font=("arial", 20 , "bold"),bd=3)
+        self.Labelpassword.grid(row=1,column=0)
+
+        self.textPassword = Entry(self.Loginframe1,font=("arial",20,"bold"),bd=3,textvariable=self.password)
+        self.textPassword.grid(row=1,column=1,padx=40,pady=15)
+
+
         
+
+    
 
 
 
