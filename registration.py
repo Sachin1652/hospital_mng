@@ -12,6 +12,8 @@ class Registration:
         self.root.geometry("1350x750+0+0")
         self.root.configure(background = "black")
 
+        
+
 
 
         title = Label(self.root,text="Member Registration form", font=("monotype corsive",30,"bold"),bd=5,relief=GROOVE,bg="#E6005C",fg="#000000")
@@ -23,6 +25,13 @@ class Registration:
 
         detail_frame = Frame(self.root,relief=RIDGE,bg="#001a66")
         detail_frame.place(x=500,y=100,width=820,height=630)
+
+
+        Cus_title = Label(manage_Frame,text="Customer Details",font=("arial",20,"bold"),bg="#001a66",fg="white")
+        Cus_title.grid(row=0,columnspan=2,pady=5)
+
+        member_datelbl = Label(manage_Frame,text="Data",font=("arial",15,"bold"),bg="#001a66",fg="white")
+        member_datelbl.grid(row=1,column=0,pady=10,sticky="w")
 
 
 if __name__ == "__main__":
