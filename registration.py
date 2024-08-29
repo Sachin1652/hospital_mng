@@ -23,7 +23,11 @@ class Registration:
         Firstname = StringVar()
         Lastname = StringVar()
 
-        
+        var1 = StringVar()
+        var2 = StringVar()
+        var3 = StringVar()
+        var4 = StringVar()
+        var5 = IntVar()  
 
 
         title = Label(self.root,text="Member Registration form", font=("monotype corsive",30,"bold"),bd=5,relief=GROOVE,bg="#E6005C",fg="#000000")
