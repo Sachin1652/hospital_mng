@@ -21,6 +21,10 @@ class Registration:
         manage_Frame.place(x=20,y=100,width=450,height=630)
 
 
+        detail_frame = Frame(self.root,relief=RIDGE,bg="#001a66")
+        detail_frame.place(x=500,y=100,width=820,height=630)
+
+
 if __name__ == "__main__":
     root = Tk()
     app = Registration(root)
