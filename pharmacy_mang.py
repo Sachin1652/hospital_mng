@@ -37,13 +37,13 @@ class windows1:
         self.button_reg.grid(row = 0,column = 0, padx = 10, pady = 10)
 
         self.button_Hosp = Button(self.Loginframe3,text="Patient Registration Window",font=("arial",15,"bold"),command=self.Hospital_window)
-        self.button_Hosp.grid(row = 0,column = 0, padx = 10, pady = 10)
+        self.button_Hosp.grid(row = 0,column = 1, padx = 10, pady = 10)
 
         self.button_Dr_appt = Button(self.Loginframe3,text="Patient Registration Window",font=("arial",15,"bold"),command=self.Dr_Appoint_window)
-        self.button_Dr_appt.grid(row = 0,column = 0, padx = 10, pady = 10)
+        self.button_Dr_appt.grid(row = 1,column = 0, padx = 10, pady = 10)
 
         self.button_med_stock = Button(self.Loginframe3,text="Patient Registration Window",font=("arial",15,"bold"),command=self.Medicine_Stock)
-        self.button_med_stock.grid(row = 0,column = 0, padx = 10, pady = 10)
+        self.button_med_stock.grid(row = 1,column = 1, padx = 10, pady = 10)
 
         
 
