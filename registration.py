@@ -30,6 +30,10 @@ class Registration:
         var5 = IntVar()  
 
 
+        Membership = StringVar()
+        Membership.set("0")
+
+
         title = Label(self.root,text="Member Registration form", font=("monotype corsive",30,"bold"),bd=5,relief=GROOVE,bg="#E6005C",fg="#000000")
         title.pack(side=TOP,fill=X)
 
