@@ -37,16 +37,16 @@ class windows1:
         self.Loginframe3 = Frame(self.frame, width=1000, height=200, bd=10, relief="groove")
         self.Loginframe3.grid(row=6, column=0,pady=5)
 
-        self.button_reg = Button(self.Loginframe3,text="Patient Registration Window",font=("arial",15,"bold"),command=self.registration_window)
+        self.button_reg = Button(self.Loginframe3,text="Patient Registration Window",state = DISABLED,font=("arial",15,"bold"),command=self.registration_window)
         self.button_reg.grid(row = 0,column = 0, padx = 10, pady = 10)
 
-        self.button_Hosp = Button(self.Loginframe3,text="Patient Registration Window",font=("arial",15,"bold"),command=self.Hospital_window)
+        self.button_Hosp = Button(self.Loginframe3,text="Patient Registration Window",state = DISABLED,font=("arial",15,"bold"),command=self.Hospital_window)
         self.button_Hosp.grid(row = 0,column = 1, padx = 10, pady = 10)
 
-        self.button_Dr_appt = Button(self.Loginframe3,text="Patient Registration Window",font=("arial",15,"bold"),command=self.Dr_Appoint_window)
+        self.button_Dr_appt = Button(self.Loginframe3,text="Patient Registration Window",state = DISABLED,font=("arial",15,"bold"),command=self.Dr_Appoint_window)
         self.button_Dr_appt.grid(row = 1,column = 0, padx = 10, pady = 10)
 
-        self.button_med_stock = Button(self.Loginframe3,text="Patient Registration Window",font=("arial",15,"bold"),command=self.Medicine_Stock)
+        self.button_med_stock = Button(self.Loginframe3,text="Patient Registration Window",state = DISABLED,font=("arial",15,"bold"),command=self.Medicine_Stock)
         self.button_med_stock.grid(row = 1,column = 1, padx = 10, pady = 10)
 
 
@@ -73,13 +73,12 @@ class windows1:
         self.button_Exit.grid(row=0,column=6,padx=10,pady=10)
 
 
-        
 
-    
+    def login_system(self):
+        user = self.Username.get()
+        pswd = self.password.get()
 
-
-
-
+      #  if(user == str("admin") and (pswd == str("admin"))):
 
 
     def registration_window(self):
@@ -89,6 +88,9 @@ class windows1:
     def Hospital_window(self):
         self.newwindow = Toplevel(self.master)
         self.app = windows3(self.newwindow)
+            
+
+
 
     def Dr_Appoint_window(self):
         self.newwindow = Toplevel(self.master)
