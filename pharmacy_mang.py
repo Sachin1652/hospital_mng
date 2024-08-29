@@ -62,14 +62,14 @@ class windows1:
         self.textPassword = Entry(self.Loginframe1,font=("arial",20,"bold"),show = "*" ,bd=3,textvariable=self.password)
         self.textPassword.grid(row=1,column=1,padx=40,pady=15)
 
-        self.button_login = Button(self.Loginframe2, text="Login",width=20,font=("arial",18,"bold"),)
+        self.button_login = Button(self.Loginframe2, text="Login",width=20,font=("arial",18,"bold"),command=self.login_system)
         self.button_login.grid(row=0,column=0,padx=10,pady=10)
 
-        self.button_Reset = Button(self.Loginframe2, text="Reset",width=20,font=("arial",18,"bold"),)
+        self.button_Reset = Button(self.Loginframe2, text="Reset",width=20,font=("arial",18,"bold"),command=self.reset_btn)
         self.button_Reset.grid(row=0,column=3,padx=10,pady=10)
 
 
-        self.button_Exit = Button(self.Loginframe2, text="Exit",width=20,font=("arial",18,"bold"),)
+        self.button_Exit = Button(self.Loginframe2, text="Exit",width=20,font=("arial",18,"bold"),command= self.Exit_btn)
         self.button_Exit.grid(row=0,column=6,padx=10,pady=10)
 
 
@@ -89,6 +89,27 @@ class windows1:
             self.button_Hosp.config(state=DISABLED)
             self.button_Dr_appt.config(state=DISABLED)
             self.button_med_stock.config(state=DISABLED)
+
+            self.Username.set("")
+            self.password.set("")
+            self.textUsername.focus()
+
+    def reset_btn(self):
+            self.button_reg.config(state=DISABLED)
+            self.button_Hosp.config(state=DISABLED)
+            self.button_Dr_appt.config(state=DISABLED)
+            self.button_med_stock.config(state=DISABLED)
+
+            self.Username.set("")
+            self.password.set("")
+            self.textUsername.focus()
+
+    def Exit_btn(self):
+            self.Exit_btn = tkinter.messagebox.askyesno("Pharmacy Management System", "Are you sure you want to Exit?")
+            if self.Exit_btn > 0:
+                self.master.destroy()
+                return
+
 
 
     def registration_window(self):
