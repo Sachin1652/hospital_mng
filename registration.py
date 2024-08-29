@@ -14,7 +14,16 @@ class Registration:
 
 
         Date_of_registration = StringVar()
-        Date_of_registration.set(time.strftime("%d/%m/%y"))        
+        Date_of_registration.set(time.strftime("%d/%m/%y"))
+
+        Ref = StringVar()
+        Mobile_no = StringVar()
+        Pincode = StringVar()
+        Address = StringVar()
+        Firstname = StringVar()
+        Lastname = StringVar()
+
+        
 
 
         title = Label(self.root,text="Member Registration form", font=("monotype corsive",30,"bold"),bd=5,relief=GROOVE,bg="#E6005C",fg="#000000")
@@ -36,6 +45,12 @@ class Registration:
 
         member_datetxt = Entry(manage_Frame,font=("arial",15,"bold"),textvariable=Date_of_registration)
         member_datetxt.grid(row=1,column=1,pady=5,padx=10,sticky="w")
+
+        member_reflb1 = Label(manage_Frame,text="Reference ID",font=("arial",15,"bold"),bg="#001a66",fg="white")
+        member_reflb1.grid(row=2,column=0,pady=5,padx=10,sticky="w")
+
+        member_reftxt = Entry(manage_Frame,font=("arial",15,"bold"),state=DISABLED,Text=Ref)
+        member_reftxt.grid(row=2,column=1,pady=5,padx=10,sticky="w")
 
 
 if __name__ == "__main__":
