@@ -13,6 +13,11 @@ class Registration:
         self.root.configure(background = "black")
 
 
+
+        title = Label(self.root,text="Member Registration form", font=("monotype corsive",30,"bold"),bd=5,relief=GROOVE,bg="#E6005C",fg="#000000")
+        title.pack(side=TOP,fill=X)
+
+
 if __name__ == "__main__":
     root = Tk()
     app = Registration(root)
