@@ -77,8 +77,17 @@ class windows1:
     def login_system(self):
         user = self.Username.get()
         pswd = self.password.get()
-
-      #  if(user == str("admin") and (pswd == str("admin"))):
+       
+        if(user == str("admin") and (pswd == str("admin"))):
+            self.button_reg.config(state=NORMAL)
+            self.button_Hosp.config(state=NORMAL)
+            self.button_Dr_appt.config(state=NORMAL)
+            self.button_med_stock.config(state=NORMAL)
+        else:
+            self.button_reg.config(state=DISABLED)
+            self.button_Hosp.config(state=DISABLED)
+            self.button_Dr_appt.config(state=DISABLED)
+            self.button_med_stock.config(state=DISABLED)
 
 
     def registration_window(self):
