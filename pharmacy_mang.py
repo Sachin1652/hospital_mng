@@ -59,7 +59,7 @@ class windows1:
         self.Labelpassword = Label(self.Loginframe1, text = "Password",font=("arial", 20 , "bold"),bd=3)
         self.Labelpassword.grid(row=1,column=0)
 
-        self.textPassword = Entry(self.Loginframe1,font=("arial",20,"bold"),bd=3,textvariable=self.password)
+        self.textPassword = Entry(self.Loginframe1,font=("arial",20,"bold"),show = "*" ,bd=3,textvariable=self.password)
         self.textPassword.grid(row=1,column=1,padx=40,pady=15)
 
 
