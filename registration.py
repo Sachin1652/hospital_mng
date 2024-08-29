@@ -12,8 +12,9 @@ class Registration:
         self.root.geometry("1350x750+0+0")
         self.root.configure(background = "black")
 
-        
 
+        Date_of_registration = StringVar()
+        Date_of_registration.set(time.strftime("%d/%m/%y"))        
 
 
         title = Label(self.root,text="Member Registration form", font=("monotype corsive",30,"bold"),bd=5,relief=GROOVE,bg="#E6005C",fg="#000000")
@@ -32,6 +33,9 @@ class Registration:
 
         member_datelbl = Label(manage_Frame,text="Data",font=("arial",15,"bold"),bg="#001a66",fg="white")
         member_datelbl.grid(row=1,column=0,pady=10,sticky="w")
+
+        member_datetxt = Entry(manage_Frame,font=("arial",15,"bold"),textvariable=Date_of_registration)
+        member_datetxt.grid(row=1,column=1,pady=5,padx=10,sticky="w")
 
 
 if __name__ == "__main__":
